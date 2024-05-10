@@ -1,0 +1,240 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Integrantes">
+  <main>
+    <div>
+      <h1>Integrantes</h1>
+    </div>
+    <div class="people">
+      <button>
+        <a href="#aaron">Aarón</a>
+      </button>
+      <button>
+        <a href="#adrian">Adrián</a>
+      </button>
+      <button>
+        <a href="#afellay">Afellay</a>
+      </button>
+      <button>
+        <a href="#gerard">Gerard</a>
+      </button>
+      <button>
+        <a href="#jimmy">Jimmy</a>
+      </button>
+    </div>
+    <section>
+      <div>
+        <h2 id="aaron">Aarón</h2>
+        <a href="/Redes Sociales">Redes Sociales</a>
+      </div>
+      <div>
+        <p>
+          Es el más gilipollas de todos. Siempre está echandose erructos en las
+          llamadas, y no para de insultar a todos el mundo. Si quieres intimar
+          más rápido con él habla de viejas y sexo.
+        </p>
+      </div>
+    </section>
+    <section>
+      <div>
+        <h2 id="adrian">Adrián</h2>
+        <a href="/Redes Sociales">Redes Sociales</a>
+      </div>
+      <div>
+        <p>
+          Fue el último en entrar al servidor. Antiguo compañero de Gerard, y
+          quien se ha ganado el corazón de todos en un abrir y cerrar. Si
+          quieres intimar con él hablar de paises, tanques y sexo.
+        </p>
+      </div>
+    </section>
+    <section>
+        <div>
+          <h2 id="afellay">Afellay</h2>
+          <a href="/Redes Sociales">Redes Sociales</a>
+        </div>
+        <div>
+          <p>
+            Mejor amigo de Gerard y el más llorón de todos; su apodo de discord
+            es ese: llorón. Te ayuda si tienes problemas, y también te insulta
+            si tienes 2 neuronas. Si quieres intimar con él hablar del Isaac e
+            informática.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div>
+            <h2 id="gerard">Gerard</h2>
+            <a href="/Redes Sociales">Redes Sociales</a>
+        </div>
+        <div>
+            <p>
+                El más viejo y administrador del servidor de discord.
+                Muy buena persona y capaz de ayudar a todo el mundo
+                sin interes propio; puedes pedirle lo que quieres. Si
+                quieres intimar con él habla de anime, fútbol y sexo.   
+            </p>
+        </div>
+      </section>
+      <section>
+        <div>
+            <h2 id="jimmy">Jimmy</h2>
+            <a href="/Redes Sociales">Redes Sociales</a>
+        </div>
+        <div>
+            <p>
+                Un poco despistado, pero buena gente de la que se 
+                puede confiar. Hay que tener un poco de paciencia con
+                él, porque se olvida de las cosas y no escucha mucho.
+                Si quieres intimar con él habla de fútbol, informática
+                y memes.
+            </p>
+        </div>
+      </section>
+  </main>
+</Layout>
+
+<style>
+
+    main{
+        position: relative;
+    }
+
+    .people{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        left: -3px;
+        padding: 20px;
+        animation: appear 0.8s ease-out;
+        top: 25%;
+    }
+
+    .people button{
+        border: none;
+        background-color: black;
+        padding: 20px;
+        border-radius: 10px 0;
+        width: 200px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .people button a{
+        font-size: 30px;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        color: rgb(168, 101, 231);
+        font-weight: 800;
+    }
+
+    .people button:hover{
+        translate: 40px;
+        scale: 1.2;
+        margin: 10px 0 10px 0;
+    }
+
+    @keyframes appear{
+        0%{
+            left: -300px;
+        }
+        25%{
+            left: -200px;
+        }
+        50%{
+            left: -100px;
+        }
+        75%{
+            left: -50px;
+        }
+        100%{
+            left: -25px;
+        }
+    }
+
+    div h1{
+        text-align: center;
+        background-image: var(--accent-gradient);
+    	-webkit-background-clip: text;
+    	-webkit-text-fill-color: transparent;
+    	background-size: 200%;
+    	background-position: 0;
+    	color: white;
+		font-size: 60px;
+    }
+
+    @media (width < 500px) {
+        .people{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            overflow-x: scroll;
+            top: 80%;
+            width: 110%;
+            flex-wrap: wrap;
+            left: 10px;
+        }
+        .people button{
+            width: 100px;
+            margin: 10px 10px 0 10px;
+        }
+        .people button a{
+            font-size: 10px;
+            text-align: center;
+        }
+        section div:last-child p{
+            font-size: 20px;
+            width: 110%;
+        }
+    }
+    
+    section{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        border: 1px solid black;
+        margin-top: 30px;
+        margin-left: 25%;
+        width: 50%;
+        border-radius: 50px;
+        box-sizing: border-box;
+        box-shadow: 0 5px 10px black;
+    }
+
+    section:last-child{
+        margin-bottom: 100px;
+    }
+
+    section div:first-child{
+        background: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+    }
+
+    h2{
+        font-size: 35px;
+    }
+
+    section div:last-child{
+        font-size: 40px;
+        padding: 50px;
+        text-align: center;
+    }
+
+    a{
+        color: rgb(168, 101, 231);
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    a:hover{
+        text-decoration: underline;
+    }
+
+</style>

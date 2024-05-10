@@ -1,0 +1,74 @@
+---
+console.log("javascript")
+---
+
+<header>
+    <h1>Para Jugar</h1>
+    <nav>
+        <button><a href="/">¿Quiénes somos?</a></button>
+        <button><a href="/Integrantes">Integrantes</a></button>
+        <button><a href="/Redes Sociales">Redes Sociales</a></button>
+    </nav>
+</header>
+
+<style>
+
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+        width: 100%;
+    }
+
+    h1{
+        color: white;
+        width: 40%;
+        text-align: center;
+        border-radius: 10px;
+        padding: 10px;
+        text-transform: uppercase;
+        font-size: 50px;
+        background-image: var(--accent-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200%;
+        background-position: 0;
+    }
+
+    nav{
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+
+    nav button{
+        background: rgb(0, 0, 0);
+        border: none;
+        border-radius: 10px 0;
+        padding: 20px;
+        transition: scale 0.3s ease-in, margin 0.2s ease-in-out;
+    }
+
+    nav button a{
+        color: white;
+        text-decoration: none;
+        padding: 20px;
+        font-size: 20px;
+        background-image: var(--accent-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 300%;
+        background-position: 0;
+        font-weight: 800;
+    }
+
+    nav button:hover{
+        scale: 1.2;
+        margin: 0 15px 0 15px;
+    }
+
+</style>

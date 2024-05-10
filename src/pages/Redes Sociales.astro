@@ -1,0 +1,131 @@
+---
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout title="Redes Sociales">
+    <main>
+        <h1>Redes Sociales</h1>
+        <div class="body">
+            <section>
+                <div>
+                    <h2>Aarón</h2>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/aroniii911/?hl=es"><img src="/img/instagram-logo-24.png" alt="insta"></a>
+                    <a href="https://github.com/Aroniii563"><img src="/img/github-logo-24.png" alt="github"></a>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <h2>Adrián</h2>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/adrietico11/?hl=es"><img src="/img/instagram-logo-24.png" alt="insta"></a>
+                    <a href="https://github.com/Adriluigar"><img src="/img/github-logo-24.png" alt="github"></a>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <h2>Afellay</h2>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/_afellay_/?hl=es"><img src="/img/instagram-logo-24.png" alt="insta"></a>
+                    <a href="https://github.com/Afe11ay"><img src="/img/github-logo-24.png" alt="github"></a>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <h2>Gerard</h2>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/geribp18/?hl=es"><img src="/img/instagram-logo-24.png" alt="insta"></a>
+                    <a href="https://github.com/Gerardbadia"><img src="/img/github-logo-24.png" alt="github"></a>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <h2>Jimmy</h2>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/jimmy_499/?hl=es"><img src="/img/instagram-logo-24.png" alt="insta"></a>
+                </div>
+            </section>
+        </div>
+    </main>
+</Layout>
+
+<style>
+
+    h1{
+        text-align:  center;
+        background-image: var(--accent-gradient);
+    	-webkit-background-clip: text;
+    	-webkit-text-fill-color: transparent;
+    	background-size: 200%;
+    	background-position: 0;
+    	color: white;
+		font-size: 60px;
+    }
+
+    .body{
+        display: grid;
+        justify-content: center;
+        flex-wrap: wrap;
+        grid-template-rows: repeat(5, 150px);
+        gap: 15px;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    section{
+        display: flex;
+        width: 800px;
+        gap: 25%;
+    }
+
+    section div:first-child{
+        width: 25%;
+        background: black;
+        text-align: center;
+        border-radius: 50px;
+    }
+
+    h2{
+        margin-top: 25%;
+    }
+
+    section div:last-child{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 75%;
+        margin: 45px 0 0 30px;
+    }
+
+    img{
+        width: 750%;
+        margin-right: 10px;
+        filter: drop-shadow(5px 5px 5px black);
+        transition: all 0.3s ease-in-out;
+    }
+
+    img:hover{
+        scale: 1.2;
+    }
+
+    @media (width < 500px) {
+        section{
+            width: 300px;
+        }
+
+        h2{
+            padding: 20px;
+            text-decoration: underline;
+            text-shadow: 2px 5px 10px black;
+        }
+
+        img{
+            margin-right: 10px;
+        }
+    }
+
+</style>
